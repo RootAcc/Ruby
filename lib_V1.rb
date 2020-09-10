@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-#load 'book.rb'
+# load 'book.rb'
 # This is the main library program
 class Library
   attr_accessor :id, :title, :author, :issued_by, :member_name
@@ -79,7 +79,8 @@ class Library
   # WHEN_1_VIEW_ALL_BOOKS
   def view_all_books
     puts 'showing all books in the library'
-    @bookrack.each { |x| puts "#{x[:id]}"+".  " + "#{x[:title]}"+".     "+"#{x[:issued_by]}"}
+    puts 'ID' + '  ' + 'Name' + '               ' + 'Issued'
+    @bookrack.each { |book| puts "#{book[:id]}" + '.  ' + "#{book[:title]}" + '.   ' + " #{book[:issued_by]}" }
   end
 
   # WHEN_2_VIEW_ALL_MEMBERS
